@@ -74,12 +74,13 @@
     <Compile Include="Assets\Scripts\Player\Crafting\ItemData.cs" />
     <Compile Include="Assets\Scripts\Player\Crafting\PlayerCraft.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\Player\Recourses\PlayerInventory.cs" />
-    <Compile Include="Assets\Scripts\Player\Recourses\Recourse.cs" />
-    <Compile Include="Assets\Scripts\Player\Recourses\Recourses.cs" />
+    <Compile Include="Assets\Scripts\Player\Resources\PlayerInventory.cs" />
+    <Compile Include="Assets\Scripts\Player\Resources\Resource.cs" />
+    <Compile Include="Assets\Scripts\Player\Resources\Resources.cs" />
     <Compile Include="Assets\Scripts\Utils\Camera\CameraBounds.cs" />
     <Compile Include="Assets\Scripts\Utils\Camera\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Utils\Camera\CameraZoom.cs" />
+    <Compile Include="Assets\Scripts\World\GenerateTrees.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

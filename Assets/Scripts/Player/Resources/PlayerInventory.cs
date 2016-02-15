@@ -10,6 +10,6 @@ public class PlayerInventory : MonoBehaviour {
 	}
 
 	void Start() {
-//		_playerInventory.Fur += 	
+        _playerResources.Fur += 4;
 	}
 }
