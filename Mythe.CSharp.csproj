@@ -58,12 +58,6 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -80,6 +74,12 @@
     <Compile Include="Assets\Scripts\Player\Crafting\ItemData.cs" />
     <Compile Include="Assets\Scripts\Player\Crafting\PlayerCraft.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Player\Recourses\PlayerInventory.cs" />
+    <Compile Include="Assets\Scripts\Player\Recourses\Recourse.cs" />
+    <Compile Include="Assets\Scripts\Player\Recourses\Recourses.cs" />
+    <Compile Include="Assets\Scripts\Utils\Camera\CameraBounds.cs" />
+    <Compile Include="Assets\Scripts\Utils\Camera\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\Utils\Camera\CameraZoom.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
