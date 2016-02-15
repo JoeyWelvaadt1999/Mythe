@@ -9,7 +9,7 @@ public class PlayerCraft : MonoBehaviour
 	void Start ()
     {
         print("Resources required to make a torch : " + "Wood: "+ _craftables.Torch.wood + " Stones: " + _craftables.Torch.stones);
-        print("Resources required to make a fur coat" + _craftables.FurCoat.fur);
+        print("Resources required to make a fur coat : " + _craftables.FurCoat.fur);
 	}
 	
 	// Update is called once per frame
