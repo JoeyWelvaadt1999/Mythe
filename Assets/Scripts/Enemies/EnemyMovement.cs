@@ -12,12 +12,10 @@ public class EnemyMovement : MonoBehaviour {
 	void Wander() {
 		if (_currentPos == Vector3.zero || _currentPos == _walkToPos) {
 			_walkToPos = new Vector3 (Random.Range (-36f, 36f), Random.Range (-9f, 9f), 0);
-			Debug.Log ("In if: " + _walkToPos);
 		}
 
 		_currentPos = transform.position;
 
 		transform.position = Vector3.MoveTowards (_currentPos, _walkToPos, 0.05f);
-		Debug.Log ("Out if: " + _walkToPos);
 	}
 }
