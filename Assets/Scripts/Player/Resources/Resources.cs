@@ -46,6 +46,17 @@ public class Resources {
 			_fur = value;
 		}
 	}
-
-
 }
+
+[System.Serializable]
+public struct ResourceTypes
+{
+	public enum ResourceType
+	{
+		_wood,
+		_stone,
+		_meat,
+		_fur
+	};
+}
+
