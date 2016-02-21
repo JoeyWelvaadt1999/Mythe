@@ -1,19 +1,65 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour
+{
+    Animator _anim;
+
 	CameraZoom _cameraZoom; //Declare variable to camera zoom component
 	private float _speed = 3f;
+
+    void Awake() {
+        _anim = GetComponent<Animator>();
+    }
 
 	void Start() {
 		_cameraZoom = Camera.main.GetComponent<CameraZoom> (); //Initialize varible to camerazoom component
 	}
 
+    void playerInput() { 
+        if (Input.GetKey(KeyCode.W))
+        {
+            _anim.SetBool("isRunningUp", true);
+        }
+        else if (Input.GetKeyUp(KeyCode.W))
+        {
+            _anim.SetBool("isRunningUp", false);
+        }
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            _anim.SetBool("IsRunningDown", true);
+        }
+        else if(Input.GetKeyUp(KeyCode.S))
+        {
+            _anim.SetBool("IsRunningDown", false);
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            _anim.SetBool("isRunningSideways", true);
+        }
+        else if (Input.GetKeyUp(KeyCode.D))
+        {
+            _anim.SetBool("isRunningSideways", false);
+        }
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            _anim.SetBool("isRunningSideways", true);
+        }
+        else if (Input.GetKeyUp(KeyCode.A))
+        {
+            _anim.SetBool("isRunningSideways", false);
+        }
+    }
+
 	void Update () {
-		Move ();
+        playerInput();
+        Move();
 	}
 
 	void Move() {
+
 		if (Input.GetKey (KeyCode.LeftShift))
 			_speed = 3 * 2;
 		else if (Input.GetKeyUp (KeyCode.LeftShift))
