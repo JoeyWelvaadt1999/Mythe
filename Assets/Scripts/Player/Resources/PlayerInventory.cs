@@ -22,8 +22,7 @@ public class PlayerInventory : MonoBehaviour {
 
 	void Start() {
 		_resourceType = _resourceObject.ResourceType;
-//        _playerResources.Fur += 4;
-		Debug.Log(_resourceType);
+       _playerResources.Fur += 4;
 	}
 
 	void SetState(){

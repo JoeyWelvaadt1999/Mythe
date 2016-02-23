@@ -51,6 +51,15 @@ public class PlayerMovement : MonoBehaviour
         {
             _anim.SetBool("isRunningSideways", false);
         }
+
+        if (Input.GetKey(KeyCode.F))
+        {
+            _anim.SetBool("onDeath", true);
+        }
+        else if (Input.GetKeyUp(KeyCode.F))
+        {
+            _anim.SetBool("onDeath", false);
+        }
     }
 
 	void Update () {

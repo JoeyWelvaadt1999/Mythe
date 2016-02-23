@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\Player\Crafting\Craftables.cs" />
     <Compile Include="Assets\Scripts\Player\Crafting\ItemData.cs" />
     <Compile Include="Assets\Scripts\Player\Crafting\PlayerCraft.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerMeleeAttack.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Player\Resources\PlayerInventory.cs" />
     <Compile Include="Assets\Scripts\Player\Resources\Resource.cs" />
