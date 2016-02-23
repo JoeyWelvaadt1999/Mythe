@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class PlayerInventory : MonoBehaviour {
-	[SerializeField]private Resource _resourceObject; //Set this game object to the gameobject(resource) that is picked up
+	[SerializeField]private Resource _resourceObject;
 	private ResourceTypes.ResourceType _resourceType = new ResourceTypes.ResourceType();
 	private Resources _playerResources = new Resources();
 
@@ -26,7 +26,7 @@ public class PlayerInventory : MonoBehaviour {
 		Debug.Log(_resourceType);
 	}
 
-	void SetState(){
+	public void SetState(){
 		switch (_resourceType) {
 		case ResourceTypes.ResourceType._fur:
 			_playerResources.Fur += _resourceObject.Value;
