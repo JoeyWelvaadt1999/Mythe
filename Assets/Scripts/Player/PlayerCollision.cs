@@ -4,10 +4,12 @@ using System.Collections;
 public class PlayerCollision : MonoBehaviour
 {
     private PlayerHealth _playerHealth;
+    private PlayerDeath _playerDeath;
 
     void Awake()
     {
         _playerHealth = GetComponent<PlayerHealth>();
+        _playerDeath = GetComponent<PlayerDeath>();
     }
 
     void TakeDamage(int damageReceived)
@@ -18,6 +20,7 @@ public class PlayerCollision : MonoBehaviour
         if (_playerHealth.Health <= 0)
         {
             print("I have died");
+            _playerDeath.OnDeath();
         }
     }
 }

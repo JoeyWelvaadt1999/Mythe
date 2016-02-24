@@ -76,9 +76,11 @@
     <Compile Include="Assets\Scripts\Player\Crafting\ItemData.cs" />
     <Compile Include="Assets\Scripts\Player\Crafting\PlayerCraft.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerCollision.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerDeath.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMeleeAttack.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerRespawn.cs" />
     <Compile Include="Assets\Scripts\Player\Resources\PlayerInventory.cs" />
     <Compile Include="Assets\Scripts\Player\Resources\Resource.cs" />
     <Compile Include="Assets\Scripts\Player\Resources\Resources.cs" />
