@@ -15,5 +15,9 @@ public class PlayerCollision : MonoBehaviour
         print("damage taken: " + damageReceived);
         _playerHealth.Health = _playerHealth.Health - damageReceived;
         print("health: " + _playerHealth.Health);
+        if (_playerHealth.Health <= 0)
+        {
+            print("I have died");
+        }
     }
 }

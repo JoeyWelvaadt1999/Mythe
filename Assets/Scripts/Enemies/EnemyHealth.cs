@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerHealth : LifePoints
+public class EnemyHealth : LifePoints
 {
     [SerializeField]
-    private float _playerHealth;
+    private float _enemyHealth;
 }

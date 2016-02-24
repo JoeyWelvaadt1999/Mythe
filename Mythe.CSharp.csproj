@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Enemies\EnemyCollision.cs" />
+    <Compile Include="Assets\Scripts\Enemies\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\Player\Crafting\Craftables.cs" />
     <Compile Include="Assets\Scripts\Player\Crafting\ItemData.cs" />
@@ -84,6 +85,7 @@
     <Compile Include="Assets\Scripts\Utils\Camera\CameraBounds.cs" />
     <Compile Include="Assets\Scripts\Utils\Camera\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Utils\Camera\CameraZoom.cs" />
+    <Compile Include="Assets\Scripts\Utils\LifePoints.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponCollision.cs" />
     <Compile Include="Assets\Scripts\World\GenerateTrees.cs" />
   </ItemGroup>
