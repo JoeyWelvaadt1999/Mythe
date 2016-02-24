@@ -26,6 +26,7 @@ public class EnemyCollision : MonoBehaviour
         if (_enemyHealth.Health <= 0)
         {
             print("I have been slain");
+            Destroy(this.gameObject);
         }
     }
 }
