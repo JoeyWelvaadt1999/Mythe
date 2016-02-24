@@ -25,6 +25,7 @@ public class PlayerMeleeAttack : MonoBehaviour
             _timer = _coolDown;
         }
 
+
         if (_attacking)
         {
             if (_timer > 0)
