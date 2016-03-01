@@ -2,11 +2,13 @@
 using System.Collections;
 
 public class CameraZoom : MonoBehaviour {
+	[SerializeField]private Shader _shader;
 	private Camera _cam;
 	private float _startSize;
 	float multiplier;
 	void Start() {
 		_cam = Camera.main;
+		Camera.main.RenderWithShader (_shader, "Shader");
 		_startSize = _cam.orthographicSize;
 	}
 
