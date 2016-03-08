@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class PlayerInventory : MonoBehaviour {
-	[SerializeField]private Resource _resourceObject;
+	private Resource _resourceObject;
 	private ResourceTypes.ResourceType _resourceType = new ResourceTypes.ResourceType();
 	private Resources _playerResources = new Resources();
 
@@ -11,6 +11,7 @@ public class PlayerInventory : MonoBehaviour {
 			return _resourceObject;
 		} set { 
 			_resourceObject = value;
+			_resourceType = _resourceObject.ResourceType;
 		}
 	}
 
@@ -21,8 +22,8 @@ public class PlayerInventory : MonoBehaviour {
 	}
 
 	void Start() {
-		_resourceType = _resourceObject.ResourceType;
-       _playerResources.Fur += 4;
+		
+
 	}
 
 	public void SetState(){
