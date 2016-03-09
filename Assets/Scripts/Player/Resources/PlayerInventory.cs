@@ -22,7 +22,7 @@ public class PlayerInventory : MonoBehaviour {
 	}
 
 	void Start() {
-		
+        _playerResources.Fur = 4;
 
 	}
 
