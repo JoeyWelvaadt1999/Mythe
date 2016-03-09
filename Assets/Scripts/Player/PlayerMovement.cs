@@ -16,24 +16,25 @@ public class PlayerMovement : MonoBehaviour
 		_cameraZoom = Camera.main.GetComponent<CameraZoom> (); //Initialize varible to camerazoom component
 	}
 
-    void playerInput() { 
+    void playerInput()
+    {
         if (Input.GetKey(KeyCode.W))
         {
             _anim.SetBool("isRunningUp", true);
-        }
-        else if (Input.GetKeyUp(KeyCode.W))
+        } else if(Input.GetKeyUp(KeyCode.W))
         {
             _anim.SetBool("isRunningUp", false);
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            _anim.SetBool("IsRunningDown", true);
+            _anim.SetBool("isRunningUp", true);
         }
-        else if(Input.GetKeyUp(KeyCode.S))
+        else if (Input.GetKeyUp(KeyCode.S))
         {
-            _anim.SetBool("IsRunningDown", false);
+            _anim.SetBool("isRunningUp", false);
         }
+
         if (Input.GetKey(KeyCode.D))
         {
             _anim.SetBool("isRunningSideways", true);
@@ -50,15 +51,6 @@ public class PlayerMovement : MonoBehaviour
         else if (Input.GetKeyUp(KeyCode.A))
         {
             _anim.SetBool("isRunningSideways", false);
-        }
-
-        if (Input.GetKey(KeyCode.F))
-        {
-            _anim.SetBool("onDeath", true);
-        }
-        else if (Input.GetKeyUp(KeyCode.F))
-        {
-            _anim.SetBool("onDeath", false);
         }
     }
 
