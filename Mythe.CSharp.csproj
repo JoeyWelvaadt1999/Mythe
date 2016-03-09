@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\Enemies\Pathfinding\AStar.cs" />
     <Compile Include="Assets\Scripts\Enemies\Pathfinding\Grid.cs" />
     <Compile Include="Assets\Scripts\Enemies\Pathfinding\Node.cs" />
+    <Compile Include="Assets\Scripts\Input\KeyboardInput.cs" />
     <Compile Include="Assets\Scripts\Player\Crafting\Craftables.cs" />
     <Compile Include="Assets\Scripts\Player\Crafting\ItemData.cs" />
     <Compile Include="Assets\Scripts\Player\Crafting\PlayerCraft.cs" />
@@ -88,6 +89,9 @@
     <Compile Include="Assets\Scripts\Player\Resources\Resource.cs" />
     <Compile Include="Assets\Scripts\Player\Resources\Resources.cs" />
     <Compile Include="Assets\Scripts\UI\AlignUI.cs" />
+    <Compile Include="Assets\Scripts\UI\InventoryBar.cs" />
+    <Compile Include="Assets\Scripts\UI\InventorySlot.cs" />
+    <Compile Include="Assets\Scripts\UI\InventorySlotAlign.cs" />
     <Compile Include="Assets\Scripts\Utils\Camera\CameraBounds.cs" />
     <Compile Include="Assets\Scripts\Utils\Camera\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Utils\Camera\CameraZoom.cs" />
