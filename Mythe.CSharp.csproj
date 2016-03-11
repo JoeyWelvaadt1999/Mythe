@@ -71,6 +71,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Enemies\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyCollision.cs" />
+    <Compile Include="Assets\Scripts\Enemies\EnemyFollow.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\Enemies\Pathfinding\AStar.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="Assets\Scripts\Utils\Camera\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Utils\Camera\CameraZoom.cs" />
     <Compile Include="Assets\Scripts\Utils\LifePoints.cs" />
+    <Compile Include="Assets\Scripts\Utils\Tags.cs" />
     <Compile Include="Assets\Scripts\Utils\Vector3\Vector.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponCollision.cs" />
     <Compile Include="Assets\Scripts\World\GenerateTrees.cs" />

@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
 
 	CameraZoom _cameraZoom; //Declare variable to camera zoom component
 	private float _speed = 3f;
+    private int dir;
+    private bool facingRight;
 
     void Awake() {
         _anim = GetComponent<Animator>();
@@ -38,6 +40,11 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             _anim.SetBool("isRunningSideways", true);
+            dir = 1;
+            if (facingRight)
+            {
+                Flip();
+            }
         }
         else if (Input.GetKeyUp(KeyCode.D))
         {
@@ -47,6 +54,11 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             _anim.SetBool("isRunningSideways", true);
+            dir = -1;
+            if (!facingRight)
+            {
+                Flip();
+            }
         }
         else if (Input.GetKeyUp(KeyCode.A))
         {
@@ -69,8 +81,17 @@ public class PlayerMovement : MonoBehaviour
 		float x = Input.GetAxis ("Horizontal");
 		float y = Input.GetAxis ("Vertical");
 
-		transform.Translate (x * _speed * Time.deltaTime, y * _speed * Time.deltaTime,0);
+		transform.Translate (x * _speed * Time.deltaTime, y * _speed * Time.deltaTime,0 * dir) ;
 
 		_cameraZoom.SetSize(_speed); //Public function to increase or decrease the camera orthographic size by speed 
 	}
+
+    protected void Flip()
+    {
+        facingRight = !facingRight;
+
+        Vector2 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
+    }
 }
