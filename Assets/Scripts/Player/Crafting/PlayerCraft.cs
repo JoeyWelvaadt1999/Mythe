@@ -20,17 +20,19 @@ public class PlayerCraft : MonoBehaviour
 
     void CraftItem()
     {
-        if (_resources.Fur >= _craftables.FurCoat.fur)
+        if (_resources.Fur >= _craftables.FurCoat.fur && Input.GetKey(KeyCode.Alpha1))
         {
-            print("craft fur coat");
+            print("you have made a fur coat");
+        }
+
+        if (_resources.Wood >= _craftables.Torch.wood && _resources.Stones >= _craftables.Torch.stones && Input.GetKey(KeyCode.Alpha2))
+        {
+            print("you have made a torch");
         }
     }
 	
 	void Update ()
     {
-        if (Input.GetKey(KeyCode.Alpha1))
-        {
-            CraftItem();
-        }
+       CraftItem();   
 	}
 }

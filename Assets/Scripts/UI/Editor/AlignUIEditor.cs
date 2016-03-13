@@ -9,6 +9,6 @@ public class AlignUIEditor : Editor {
 	{
 		DrawDefaultInspector ();
 		AlignUI align = (AlignUI)target;
-		align.CalculatePosition ();
+//		align.CalculatePosition ();
 	}
 }
