@@ -6,7 +6,6 @@ public class EnemyFollow : MonoBehaviour
 
     [SerializeField]
     private float _radius;
-    private int _layermask;
     [SerializeField]
     private Transform _playerTarget;
     [SerializeField]
@@ -15,12 +14,16 @@ public class EnemyFollow : MonoBehaviour
     private float minDistanceFromPlayer;
     [SerializeField]
     private float maxDistanceFromPlayer;
+    public delegate void PlayerInRange();
+    public static event PlayerInRange InitiateAttack;
+
+
 
     void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(this.transform.position, _radius);
-    }	
+    }
 
     void FollowPlayerTarget()
     {
@@ -28,17 +31,18 @@ public class EnemyFollow : MonoBehaviour
         newEnemyScale.x *= -1;
         if (Vector2.Distance(transform.position, _playerTarget.position) >= minDistanceFromPlayer)
         {
-            print("im chasing my target");
             if (_playerTarget.transform.localScale.x < 0)
             {
-                transform.localScale = newEnemyScale;
-                
+                transform.localScale = newEnemyScale;   
             }
         }
 
         if(Vector2.Distance(transform.position, _playerTarget.position) <= maxDistanceFromPlayer)
         {
-            print("Initiate attack");
+            if (InitiateAttack != null)
+            {
+                InitiateAttack();
+            }
         }
     }
 
@@ -49,7 +53,6 @@ public class EnemyFollow : MonoBehaviour
         {
             if (coll.gameObject.tag == "Player")
             {
-                print("woop");
                 FollowPlayerTarget();
             }
         }
