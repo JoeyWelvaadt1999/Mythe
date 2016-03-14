@@ -4,28 +4,33 @@ using System.Collections;
 public class PropSpawner : MonoBehaviour
 {
     [SerializeField]
-    private Vector2 _bounds; //borders of the game
+    private Vector2 _bounds;
     [SerializeField]
     private GameObject[] _props;
 
-    private float _maxProps = 200;
+    private float _maxProps = 200;//maximum amount of props that will be instantiated
     private float _maxClusters = 3;
 
     [SerializeField]
     private GameObject _treeCluster;
-    private Vector2 _clusterbounds;
+    private Vector2 _clusterBounds;
 
-    private float _minDis = 1; //minimal distance between props/propclusters
-    private float _maxDis = 10; //maximal distance ^
-    
+    private float _minClusterWidth = 5;
+    private float _maxClusterWidth = 15;
+    private float _minClusterHeight = 5;
+    private float _maxClusterHeight = 15;
+
+    //private float _minDis = 1; //minimal distance between props/propclusters
+    //private float _maxDis = 10; //maximal distance ^
+
 
     void Start()
     {
-        //CreateTreeCluster();
-        //CreatePropPosition();
+        CreateTreeCluster();
         PlaceProps();
     }
 
+    //work in progress
     void PlaceProps()
     {
         for (int i = 0; i < _maxProps; i++)
@@ -41,18 +46,22 @@ public class PropSpawner : MonoBehaviour
             Instantiate(randomProp, new Vector3(randomPosX, randomPosY, 0), Quaternion.identity);
         }
     }
-    /*
-    void CreatePropPosition()
-    {
 
-    }
 
+    //work in progress
     void CreateTreeCluster()
     {
-        for (int i = 0; i < _maxClusters; i++)
+        _clusterBounds = new Vector2(
+            Random.Range(_minClusterWidth, _maxClusterWidth),
+            Random.Range(_minClusterHeight, _maxClusterHeight)
+            );
+
+        for (int x = 0; x < _clusterBounds.x; x++)
         {
-            
+            for (int y = 0; y < _clusterBounds.y; y++)
+            {
+                Instantiate(_props[8], new Vector3(x, y, 0), Quaternion.identity);
+            }
         }
     }
-    */
 }
