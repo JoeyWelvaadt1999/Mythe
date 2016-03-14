@@ -58,12 +58,6 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -77,10 +71,7 @@
     <Compile Include="Assets\Scripts\Enemies\Pathfinding\AStar.cs" />
     <Compile Include="Assets\Scripts\Enemies\Pathfinding\Grid.cs" />
     <Compile Include="Assets\Scripts\Enemies\Pathfinding\Node.cs" />
-<<<<<<< HEAD
-=======
     <Compile Include="Assets\Scripts\Input\KeyboardInput.cs" />
->>>>>>> 95a8b09cb99b3576ff6c79ed3d188a83a031724f
     <Compile Include="Assets\Scripts\Player\Crafting\Craftables.cs" />
     <Compile Include="Assets\Scripts\Player\Crafting\ItemData.cs" />
     <Compile Include="Assets\Scripts\Player\Crafting\PlayerCraft.cs" />
@@ -94,30 +85,22 @@
     <Compile Include="Assets\Scripts\Player\Resources\Resource.cs" />
     <Compile Include="Assets\Scripts\Player\Resources\Resources.cs" />
     <Compile Include="Assets\Scripts\UI\AlignUI.cs" />
-<<<<<<< HEAD
-=======
     <Compile Include="Assets\Scripts\UI\InventoryBar.cs" />
     <Compile Include="Assets\Scripts\UI\InventorySlot.cs" />
     <Compile Include="Assets\Scripts\UI\InventorySlotAlign.cs" />
->>>>>>> 95a8b09cb99b3576ff6c79ed3d188a83a031724f
     <Compile Include="Assets\Scripts\Utils\Camera\CameraBounds.cs" />
     <Compile Include="Assets\Scripts\Utils\Camera\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Utils\Camera\CameraZoom.cs" />
     <Compile Include="Assets\Scripts\Utils\LifePoints.cs" />
-<<<<<<< HEAD
-    <Compile Include="Assets\Scripts\Utils\Vector3\Vector.cs" />
-    <Compile Include="Assets\Scripts\Weapons\WeaponCollision.cs" />
-    <Compile Include="Assets\Scripts\World\GenerateTrees.cs" />
-    <Compile Include="Assets\Scripts\World\PropSpawner.cs" />
-=======
     <Compile Include="Assets\Scripts\Utils\Tags.cs" />
     <Compile Include="Assets\Scripts\Utils\Vector3\Vector.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponCollision.cs" />
     <Compile Include="Assets\Scripts\World\GenerateTrees.cs" />
+    <Compile Include="Assets\Scripts\World\PropSpawner.cs" />
+    <Compile Include="Assets\Scripts\World\TreeCluster.cs" />
     <Compile Include="Assets\Spriter2UnityDX\Runtime\EntityRenderer.cs" />
     <Compile Include="Assets\Spriter2UnityDX\Runtime\SortingOrderUpdater.cs" />
     <Compile Include="Assets\Spriter2UnityDX\Runtime\TextureController.cs" />
->>>>>>> 95a8b09cb99b3576ff6c79ed3d188a83a031724f
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
