@@ -10,6 +10,7 @@ public class PropSpawner : MonoBehaviour
 
     private float _maxProps = 200;//maximum amount of props that will be instantiated
     private float _maxClusters = 3;
+    private float _currentClusterAmount = 0;
 
     [SerializeField]
     private GameObject _treeCluster;
@@ -22,7 +23,6 @@ public class PropSpawner : MonoBehaviour
 
     //private float _minDis = 1; //minimal distance between props/propclusters
     //private float _maxDis = 10; //maximal distance ^
-
 
     void Start()
     {
@@ -46,8 +46,7 @@ public class PropSpawner : MonoBehaviour
             Instantiate(randomProp, new Vector3(randomPosX, randomPosY, 0), Quaternion.identity);
         }
     }
-
-
+    
     //work in progress
     void CreateTreeCluster()
     {
@@ -60,8 +59,10 @@ public class PropSpawner : MonoBehaviour
         {
             for (int y = 0; y < _clusterBounds.y; y++)
             {
-                Instantiate(_props[8], new Vector3(x, y, 0), Quaternion.identity);
+                GameObject treeClone = (GameObject)Instantiate(_props[8], new Vector3(x, y, 0), Quaternion.identity);
+                treeClone.transform.parent = _treeCluster.transform;
             }
         }
+        _currentClusterAmount++;
     }
 }
