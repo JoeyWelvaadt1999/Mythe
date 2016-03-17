@@ -1,12 +1,16 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 public class PropSpawner : MonoBehaviour
 {
     [SerializeField]
     private Vector2 _bounds;
+    //[SerializeField]
+    //private GameObject[] _props;
+
     [SerializeField]
-    private GameObject[] _props;
+    private List<GameObject> _propList = new List<GameObject>();
 
     private float _maxProps = 200;//maximum amount of props that will be instantiated
     private float _maxClusters = 3;
@@ -41,7 +45,7 @@ public class PropSpawner : MonoBehaviour
             float randomPosY = Random.Range(-_bounds.y, _bounds.y);
 
             //random gameobject every iteration
-            GameObject randomProp = _props[Random.Range(0, _props.Length)];
+            GameObject randomProp = _propList[Random.Range(0, _propList.Count)];
 
             Instantiate(randomProp, new Vector3(randomPosX, randomPosY, 0), Quaternion.identity);
         }
@@ -55,14 +59,20 @@ public class PropSpawner : MonoBehaviour
             Random.Range(_minClusterHeight, _maxClusterHeight)
             );
 
+        _treeCluster = new GameObject();
+
         for (int x = 0; x < _clusterBounds.x; x++)
         {
             for (int y = 0; y < _clusterBounds.y; y++)
             {
-                GameObject treeClone = (GameObject)Instantiate(_props[8], new Vector3(x, y, 0), Quaternion.identity);
+                //offset of the tree position so that it won't be squareshaped clusters
+                float offsetX = (y % 2 == 0 ? Random.Range(.4f, .8f) : 0f);
+                float offsetY = (x % 2 == 0 ? Random.Range(.4f, .8f) : 0f);
+
+                GameObject treeClone = (GameObject)Instantiate(_propList[8], new Vector3(x + offsetX, y + offsetY, 0), Quaternion.identity);
                 treeClone.transform.parent = _treeCluster.transform;
             }
         }
-        _currentClusterAmount++;
+        _propList.Add(_treeCluster);
     }
 }
