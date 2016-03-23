@@ -95,9 +95,7 @@
     <Compile Include="Assets\Scripts\Utils\Tags.cs" />
     <Compile Include="Assets\Scripts\Utils\Vector3\Vector.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponCollision.cs" />
-    <Compile Include="Assets\Scripts\World\GenerateTrees.cs" />
     <Compile Include="Assets\Scripts\World\PropSpawner.cs" />
-    <Compile Include="Assets\Scripts\World\TreeCluster.cs" />
     <Compile Include="Assets\Spriter2UnityDX\Runtime\EntityRenderer.cs" />
     <Compile Include="Assets\Spriter2UnityDX\Runtime\SortingOrderUpdater.cs" />
     <Compile Include="Assets\Spriter2UnityDX\Runtime\TextureController.cs" />
