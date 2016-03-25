@@ -7,6 +7,12 @@ public class PropSpawner : MonoBehaviour
 {
     [SerializeField]
     private Vector2 _bounds;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 0b26ff7302e78b778fc60c6ac590ad41b9b164ed
     [SerializeField]
     private GameObject[] _props;
 
@@ -14,14 +20,21 @@ public class PropSpawner : MonoBehaviour
     private float _maxClusters = 3;
     //[SerializeField]
     //private GameObject[] _props;
+>>>>>>> 35e3b104a8541c93baecb2e0da28add2722e69cb
 
     [SerializeField]
-    private List<GameObject> _propList = new List<GameObject>();
+    private List<GameObject> _propList = new List<GameObject>(); 
 
     private float _maxProps = 200;//maximum amount of props that will be instantiated
+
     private float _maxClusters = 3;
     private float _currentClusterAmount = 0;
+<<<<<<< HEAD
     [SerializeField]
+=======
+>>>>>>> a84a50ee120f0f81d1059133eed40c37d5757ef4
+
+>>>>>>> 0b26ff7302e78b778fc60c6ac590ad41b9b164ed
     private GameObject _treeCluster;
     private Vector2 _clusterBounds;
 
